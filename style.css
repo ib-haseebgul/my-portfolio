@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -12,7 +13,6 @@ body {
 
 .hero-header {
     width: 100%;
-    max-height: auto; /* Ensures it takes full height */
     background: #222;
 }
 
@@ -30,49 +30,60 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
-    /* Container */
+
+/* Container */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 4rem;
     flex-wrap: wrap;
-    padding-top: 4rem;
-   
+    text-align: center;
+    gap: 2rem;
 }
 
 /* Hero Image */
 .container .hero-pic {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
-    border: 15px solid #444;
+    border: 10px solid #444;
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
-
 }
+
+.hero-pic img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.1);
+}
+
 .hero-text {
     max-width: 500px;
-    text-align: left; /* Center aligns text on all screen sizes */
+    text-align: center;
 }
 
-
+/* Logo */
 .logo-text {
     font-size: 24px;
     font-weight: 500;
     color: #fff;
 }
 
+/* Navigation */
 nav .navlinks {
     list-style-type: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav .navlinks li {
-    display: inline-block;
-    margin-right: 2.5rem;
+    margin: 10px;
 }
 
 nav .navlinks li a {
@@ -83,21 +94,7 @@ nav .navlinks li a:hover {
     color: #007ced;
 }
 
-
-
-.hero-pic img {
-    height: 100%;
-    width: 100%;
-    transition: 0.5s;
-}
-
-.hero-pic img:hover {
-    transform: scale(1.2);
-}
-
 /* Hero Text */
-
-
 .hero-text h5 {
     color: #e5e5e5;
     font-size: 14px;
@@ -110,26 +107,27 @@ nav .navlinks li a:hover {
 
 .hero-text h1 {
     color: #007ced;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .hero-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #e5e5e5;
 }
 
 /* Button Styling */
 .btn-group {
-    margin: 45px 0;
+    margin: 30px 0;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .btn-group .btn {
     border-color: #d5d5d5;
     color: #fff;
     background-color: #333;
-    padding: 10px 35px;
+    padding: 10px 30px;
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
@@ -156,62 +154,47 @@ nav .navlinks li a:hover {
     text-shadow: 0 0 1px #007ced, 0 0 2px #007ced, 0 0 4px #007ced;
 }
 
-
-@media (max-width: 768px) { /* Tablets & Mobile */
-    .wrapper {
-        max-width: 100%;
-        padding: 0 10px;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    nav .navlinks {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    nav .navlinks li {
-        display: block;
-        margin: 10px 0;
-    }
-
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        padding-top: 2rem;
+        padding: 2rem;
     }
-
-    .hero-pic {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 20px;
-
+    .hero-text {
+        max-width: 100%;
     }
+}
 
-    .hero-text  {
-        
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
         text-align: center;
     }
+    nav .navlinks {
+        flex-direction: column;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .container .hero-pic {
+        width: 200px;
+        height: 200px;
+    }
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
     .hero-text p {
-        font-size: 1rem;
-        padding: 0 15px;
+        font-size: 0.9rem;
     }
-
     .btn-group {
         flex-direction: column;
-        align-items: center;
     }
-
     .btn-group .btn {
-        width: 80%;
-        margin-bottom: 10px;
+        width: 100%;
     }
 }
 
