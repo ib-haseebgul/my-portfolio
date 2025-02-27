@@ -34,7 +34,7 @@ header {
 /* Container */
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 4rem;
     flex-wrap: wrap;
@@ -64,7 +64,7 @@ header {
 
 .hero-text {
     max-width: 500px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Logo */
@@ -119,7 +119,7 @@ nav .navlinks li a:hover {
 .btn-group {
     margin: 30px 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 1rem;
 }
 
