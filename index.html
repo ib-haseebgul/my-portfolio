@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!---------------------------------------------------Social Media Icons---------------------------------------------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<!-- ------------------------------------------------Education Section timeline script ---------------------------------------------------->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const timelineItems = document.querySelectorAll(".timeline-item");
+    
+        function revealTimelineItems() {
+            timelineItems.forEach((item) => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < window.innerHeight - 50) {
+                    item.classList.add("visible");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", revealTimelineItems);
+        revealTimelineItems(); // Run on page load in case section is already in view
+    });
+    </script>
+<!---------------------------------------------------typed js for typing text effect on home page--------------------------------------------->
+            
+                
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+<!-- ---------------------------------------------------------Home  Section ------------------------------------------------------------>
+<body>
+     <div class="hero-header" id="home">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <div class="logo-text">Haseeb Gul</div>
+                </div>
+                <nav>
+                    <ul class="navlinks">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Haseeb Gul</h1>
+                    <p> I am a passionate Front-End Web Developer with a strong foundation in HTML, CSS, and JavaScript. 
+                        I specialize in creating modern, responsive, and user-friendly web interfaces. As a beginner in the market, 
+                        I am eager to learn, grow, and contribute to innovative web projects.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="cv.pdf" download="My_CV.pdf" class="btn active">Download CV</a>
+                    </div>
+                    
+
+                    <div class="social">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/ib-haseebgul" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- --------------------------------------------------About Me Section ------------------------------------------------------------>
+     <section class="about-me" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-box">
+            <p>
+                Hello! My name is Haseeb Gul, and I am a passionate Frontend Developer.
+                I have been learning HTML, CSS, and JavaScript, focusing on building interactive web experiences.
+                As a beginner in the market, I am eager to apply my skills in real-world projects.I love crafting modern, responsive, and user-friendly websites.
+                My goal is to create seamless designs that are both aesthetic and functional.
+            </p>
+            <p>
+                Currently, I am expanding my knowledge of React.js and advanced JavaScript.
+                I enjoy experimenting with UI/UX design principles to improve user experience.
+                My learning process involves hands-on projects and exploring the latest web trends.
+                I am highly motivated to grow as a developer and enhance my coding skills.
+                I believe in continuous learning and staying up-to-date with emerging technologies.
+            </p>
+            <p>
+                Right now, I am also improving my knowledge of Git, GitHub, and deployment tools.
+                I aim to contribute to open-source projects and collaborate with experienced developers.
+                As a problem solver, I love debugging and optimizing code for better performance.
+                I am also keen on mastering CSS animations, flexbox, and grid layouts.My dream is to work on projects that impact users positively and make a difference.
+            <p>
+                Apart from coding, I enjoy reading tech blogs and watching tutorials. 
+                I am always excited to learn new frameworks and improve my efficiency.
+                I look forward to connecting with fellow developers and growing in the industry.
+                If you have any opportunities or projects, feel free to reach out to me! 
+            </p>
+        </div>
+    </section>
+    
+    <!-- -----------------------------------------------------Education Section ----------------------------------------------------------->
+
+<section class="education" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+        <!-- Bachelor's Degree -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Bachelor's in Software Engineering</h3>
+                <span class="timeline-date">2021 - 2025</span>
+                <p>Abbottabad University of Science and Technology</p>
+            </div>
+        </div>
+        <!-- HSSC (Pre-Engineering) -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Higher Secondary School Certificate </h3>
+                <span class="timeline-date">2019 - 2021</span>
+                <p>Army Public School & College FF Campus Abbottabad.</p>
+            </div>
+        </div>
+        <!-- SSC (Matriculation - Science) -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Secondary School Certificate (SSC)</h3>
+                <span class="timeline-date">2017 - 2019</span>
+                <p>Al Madina Taleem-ul-Quran Public School</p>
+            </div>
+        </div>
+        <!-- Front-End Web Development Certificate -->
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Front-End Web Development Certificate</h3>
+                <span class="timeline-date">2019</span>
+                <p>Adan Incubation Lab.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-----------------------------------------------------------Skills  Section----------------------------------------------->
+
+<section class="skills" id="skills">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <h3>HTML</h3>
+            <div class="progress-circle" data-percentage="90">
+                <span>90%</span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <h3>CSS</h3>
+            <div class="progress-circle" data-percentage="85">
+                <span>85%</span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <div class="progress-circle" data-percentage="75">
+                <span>75%</span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <h3>React.js</h3>
+            <div class="progress-circle" data-percentage="70">
+                <span>40%</span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+            <h3>Git & GitHub</h3>
+            <div class="progress-circle" data-percentage="80">
+                <span>80%</span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>UI/UX Design</h3>
+            <div class="progress-circle" data-percentage="65">
+                <span>65%</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-----------------------------------------------------------Project Section----------------------------------------------->
+
+<section class="projects" id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <img src="images/project1.webp" alt="Project 1">
+            <div class="project-info">
+                <h3> Personal Portfolio Website</h3>
+                <p>Create a personal portfolio showcasing my skills, projects, and contact details. </p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/project2.webp" alt="Project 2">
+            <div class="project-info">
+                <h3>Responsive Landing Page</h3>
+                <p>Build a fully responsive  product landing page with a modern design and animations.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <img src="images/project3.webp" alt="Project 3">
+            <div class="project-info">
+                <h3>To Do List App</h3>
+                <p>Develop a to-do list where users can add, delete, and mark tasks as completed.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/project4.webp" alt="Project 4">
+            <div class="project-info">
+                <h3>Weather App</h3>
+                <p>Create a weather application using OpenWeather API to fetch and display live weather data based on user input.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/project5.webp" alt="Project 5">
+            <div class="project-info">
+                <h3>Calculator</h3>
+                <p>Build a functional calculator with basic arithmetic operations using JavaScript.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="images/project6.webp" alt="Project 6">
+            <div class="project-info">
+                <h3>Image Gallery</h3>
+                <p>Develop an interactive image gallery where clicking on an image opens it in a lightbox with navigation controls.</p>
+                <a href="#" class="btn">View Live</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--------------------------------------------------------------contact section------------------------------------------------------------->
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-description">Feel free to reach out! I'm always open to new opportunities.</p>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="input-group">
+                <textarea id="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i>ib.haseebgul@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +92 313 552 594 8 </p>
+            <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/ib-haseebgul" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!---------------------------------------------------text auto type--------------------------------------------->
+
+<script>
+
+    var typed=new Typed(".input",{
+        strings:["Frontend Developer","UX Designer","Web Developer"],
+        typedSpeed:30,
+        backSpeed:50,
+        loop:true
+    })
+ </script> 
+
+</body>
+</html>
