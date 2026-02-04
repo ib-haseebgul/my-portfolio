@@ -331,6 +331,9 @@ img {
   margin-left: auto;
   margin-bottom: 0.6rem;
 }
+#contact {
+  scroll-margin-top: 75px; /* adjust to your header height */
+}
 
 /* ===== FOOTER =====*/
 .footer {
@@ -400,7 +403,7 @@ img {
   }
   .contact__form {
     width: 360px;
-    padding-top: 2rem;
+    padding-top: 0rem;
   }
   .contact__container {
     justify-items: center;
